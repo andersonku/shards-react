@@ -5492,7 +5492,10 @@ NavbarBrand.propTypes = {
   /**
    * The component's tag type.
    */
-  tag: propTypes.oneOfType([propTypes.func, propTypes.string])
+  tag: propTypes.oneOfType([propTypes.func, propTypes.string, propTypes.shape({
+    $$typeof: propTypes.symbol,
+    render: propTypes.func
+  })])
 };
 NavbarBrand.defaultProps = {
   tag: "a"
